@@ -1,5 +1,5 @@
 # TRADES
-TRADES (TRadeoff-inspired Adversarial DEfense via Surrogate-loss minimization)
+**TRADES** (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization)
 
 
 

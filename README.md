@@ -17,6 +17,11 @@ TRADES (TRadeoff-inspired Adversarial DEfense via Surrogate-loss minimization)
   -  python train_trades_mnist.py
 ```
 
+* Train CNN model on MNIST for binary classification:
+```bash
+  -  python train_trades_mnist_binary.py
+```
+
 ### Robustness Evaluation:
 
 * Evaluate WideResNet model on CIFAR10 by FGSM-20:

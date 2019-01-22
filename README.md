@@ -33,12 +33,12 @@ $ conda install pytorch=0.4.1
 
 ### Robustness Evaluation:
 
-* Evaluate WideResNet model on CIFAR10 by FGSM-20:
+* Evaluate robust WideResNet model on CIFAR10 by FGSM-20 attack:
 ```bash
   -  python pgd_attack_cifar10.py
 ```
 
-* Evaluate CNN model on MNIST by FGSM-40:
+* Evaluate robust CNN model on MNIST by FGSM-40 attack:
 ```bash
   -  python pgd_attack_mnist.py
 ```

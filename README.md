@@ -13,16 +13,8 @@ $ source ~/.bashrc
 $ conda install pytorch=0.4.1
 ```
 
-## Get started
-To get started, cd into the directory. Then run the scripts:
-* train_trades_cifar10.py is a demo of training WideResNet model on CIFAR10.
-* train_trades_mnist.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers.
-* train_trades_mnist_binary.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers.
 
-## Using the code
-The command `python xxx.py --help` gives the help information about how to run the code.
-
-## Usage Examples:
+## Usage Examples
 ### Adversarial Training:
 
 * Train WideResNet model on CIFAR10:
@@ -30,7 +22,7 @@ The command `python xxx.py --help` gives the help information about how to run t
   -  python train_trades_cifar10.py
 ```
 
-* Train CNN model on MNIST:
+* Train CNN model (two convolutional layers + two fully-connected layers) on MNIST:
 ```bash
   -  python train_trades_mnist.py
 ```

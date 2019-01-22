@@ -14,7 +14,7 @@ $ conda install pytorch=0.4.1
 ```
 
 
-## Usage Examples
+## Running Examples
 ### Adversarial Training:
 
 * Train WideResNet model on CIFAR10:

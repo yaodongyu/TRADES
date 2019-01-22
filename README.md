@@ -1,6 +1,6 @@
 # TRADES (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization) 
 
-This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy".
+This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang, Yaodong Yu, Jiantao Jiao, Eric P. Xing, Laurent El Ghaoui, and Michael I. Jordan.
 
 The code is written in python and requires numpy, matplotlib, torch, torchvision and the tqdm library.
 

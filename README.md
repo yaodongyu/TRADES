@@ -54,6 +54,9 @@ $ conda install pytorch=0.4.1
 ## Experimental Results
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean l2 perturbation distance.
+<p align="center">
+    <img src="NeurIPS.png" width="600"\>
+</p>
 
 
 ### Results in the Unrestricted Adversarial Examples Challenge

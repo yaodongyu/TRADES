@@ -15,8 +15,8 @@ $ conda install pytorch=0.4.1
 
 ## Get started
 To get started, cd into the directory. Then run the scripts:
-* train_trades_cifar10.py is a demo of training WideResNet model on CIFAR10,
-* train_trades_mnist.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers,
+* train_trades_cifar10.py is a demo of training WideResNet model on CIFAR10.
+* train_trades_mnist.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers.
 * train_trades_mnist_binary.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers.
 
 ## Using the code

@@ -15,11 +15,9 @@ $ conda install pytorch=0.4.1
 
 ## Get started
 To get started, cd into the directory. Then run the scripts:
-* ddd
-* gan_stackelberg_mG.py is a demo on the performance of Stackelberg GAN on Gaussian mixture dataset,
-* gan_branch_mG.py is a demo on the performance of multi-branch GAN (a baseline method) on Gaussian mixture dataset,
-* gan_mnist_classifier.py is a demo on the performance of Stackelberg GAN on MNIST dataset,
-* gan_mnist_fashion_classifier.py is a demo on the performance of Stackelberg GAN on fashion-MNIST dataset.
+* train_trades_cifar10.py is a demo of training WideResNet model on CIFAR10,
+* train_trades_mnist.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers,
+* train_trades_mnist_binary.py is a demo of training CNN model on MNIST which has two convolutional layers, followed by two fully-connected layers.
 
 ## Using the code
 The command `python xxx.py --help` gives the help information about how to run the code.

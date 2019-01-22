@@ -52,3 +52,6 @@ $ conda install pytorch=0.4.1
 ```
 
 ## Experimental Results
+### Results in NeurIPS 2018 Adversarial Vision Challenge
+
+### Results in Competition: Unrestricted Adversarial Example

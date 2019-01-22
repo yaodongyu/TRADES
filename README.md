@@ -80,6 +80,10 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 | [Pytorch ResNet <br>(trained on bird-or-bicycle extras)](examples/undefended_pytorch_resnet)  |  Google Brain | 98.8% | 74.6% | 49.5% | 2.5% | 8.0% | Oct 1st, 2018 |
 | [Pytorch ResNet50 <br>(trained on bird-or-bicycle extras)](https://github.com/xincoder/google_attack) |TRADES|100.0%|100.0%|99.5%|100.0%|95.0%|Jan 17th, 2019 (EST)|
 
+## Leaderboard
+
+We welcome various attack methods to attack our defense models.
+
 ## Reference
 For technical details and full experimental results, see [the paper]().
 ```

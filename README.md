@@ -84,7 +84,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 
 ## Want to attack TRADES? No problem!
 
-We welcome various attack methods to attack our defense models.
+TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models.
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

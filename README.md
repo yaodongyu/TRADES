@@ -64,6 +64,7 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 In response to the Unrestricted Adversarial Examples Challenge, we implement TRADES (with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
 
 All percentages below correspond to the model's accuracy at 80% coverage.
+
 | Defense               | Submitted by  | Clean data | Common corruptions | Spatial grid attack | SPSA attack | Boundary attack |  Submission Date |
 | --------------------- | ------------- | ------------| ------------ |--------------- |-------- | ------- | --------------- |
 | [Keras ResNet <br>(trained on ImageNet)](examples/undefended_keras_resnet)   |  Google Brain   |    100.0%    |    99.2%    |  92.2%    |     1.6%    |     4.0%     |  Sept 29th, 2018 |

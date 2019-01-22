@@ -55,14 +55,14 @@ TRADES is a loss function for adversarial training with theoretical guarantees.
 ```
 
 ## Experimental Results
-### Results in the NeurIPS 2018 Adversarial Vision Challenge
+### Results in the NeurIPS 2018 Adversarial Vision Challenge [link](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
 <p align="center">
     <img src="NeurIPS.png" width="400"\>
 </p>
 
 
-### Results in the Unrestricted Adversarial Examples Challenge
+### Results in the Unrestricted Adversarial Examples Challenge [link](https://github.com/google/unrestricted-adversarial-examples)
 
 In response to the Unrestricted Adversarial Examples Challenge, we implement TRADES (with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
 
@@ -73,3 +73,17 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 | [Keras ResNet <br>(trained on ImageNet)](examples/undefended_keras_resnet)   |  Google Brain   |    100.0%    |    99.2%    |  92.2%    |     1.6%    |     4.0%     |  Sept 29th, 2018 |
 | [Pytorch ResNet <br>(trained on bird-or-bicycle extras)](examples/undefended_pytorch_resnet)  |  Google Brain | 98.8% | 74.6% | 49.5% | 2.5% | 8.0% | Oct 1st, 2018 |
 | [Pytorch ResNet50 <br>(trained on bird-or-bicycle extras)](https://github.com/xincoder/google_attack) |TRADES|100.0%|100.0%|99.5%|100.0%|95.0%|Jan 17th, 2019 (EST)|
+
+## Reference
+For technical details and full experimental results, see [the paper]().
+```
+@article{Zhang2018stackelberg, 
+	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 
+	title = {Theoretically Principled Trade-off between Robustness and Accuracy}, 
+	journal={},
+	year = {2019}
+}
+```
+
+## Contact
+Please contact hongyanz@cs.cmu.edu if you have any question on the codes.

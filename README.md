@@ -46,8 +46,7 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### What is TRADES?
-TRADES is a loss function for adversarial training with theoretical guarantees.
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>$$\frac{1}{4}$$
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{1}{4}" style="border:none;">
 
 ### How to import the TRADES loss for your adversarial training?
 * To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():

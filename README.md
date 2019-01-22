@@ -14,7 +14,8 @@ $ conda install pytorch=0.4.1
 ```
 
 ## Get started
-To get started, cd into the directory. Then runs the scripts: 
+To get started, cd into the directory. Then run the scripts:
+* ddd
 * gan_stackelberg_mG.py is a demo on the performance of Stackelberg GAN on Gaussian mixture dataset,
 * gan_branch_mG.py is a demo on the performance of multi-branch GAN (a baseline method) on Gaussian mixture dataset,
 * gan_mnist_classifier.py is a demo on the performance of Stackelberg GAN on MNIST dataset,

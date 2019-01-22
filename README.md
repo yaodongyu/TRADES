@@ -82,7 +82,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 
 ## Leaderboard
 
-We welcome various attack methods to attack our defense models.
+We welcome various attack methods to try to attack our defense models.
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

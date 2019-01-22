@@ -46,7 +46,7 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### What is TRADES?
-<img src="http://chart.googleapis.com/chart?cht=tx&chl= \frac{1}{4}" style="border:none;">
+<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
 
 ### How to import the TRADES loss for your adversarial training?
 * To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():
@@ -55,14 +55,14 @@ $ conda install pytorch=0.4.1
 ```
 
 ## Experimental Results
-### Results in the NeurIPS 2018 Adversarial Vision Challenge [link](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
+### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
 <p align="center">
     <img src="NeurIPS.png" width="400"\>
 </p>
 
 
-### Results in the Unrestricted Adversarial Examples Challenge [link](https://github.com/google/unrestricted-adversarial-examples)
+### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 
 In response to the Unrestricted Adversarial Examples Challenge, we implement TRADES (with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
 

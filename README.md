@@ -47,7 +47,7 @@ $ conda install pytorch=0.4.1
 
 ### What is TRADES?
 TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
-![](http://latex.codecogs.com/gif.latex?\\\min_f\mathbb{E}\large{\\{}\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\large{\\}})
+![](http://latex.codecogs.com/gif.latex?\\\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\right\\})
 
 ### How to import the TRADES loss for your adversarial training?
 * To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():

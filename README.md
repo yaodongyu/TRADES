@@ -51,7 +51,7 @@ TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy lo
 
 The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter λ plays a critical role on balancing the importance of natural and robust errors.
 <p align="center">
-    <img src="NeurIPS.png" width="400"\>
+    <img src="images/2D_grid.png" width="400"\>
 </p>
 
 ### How to import the TRADES loss for your adversarial training?
@@ -64,7 +64,7 @@ The first term encourages the natural error to be optimized by minimizing the "d
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
 <p align="center">
-    <img src="NeurIPS.png" width="400"\>
+    <img src="images/NeurIPS.png" width="400"\>
 </p>
 
 

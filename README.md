@@ -1,5 +1,4 @@
-# TRADES
-**TRADES** (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization)
+# TRADES (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization) 
 
 This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy".
 

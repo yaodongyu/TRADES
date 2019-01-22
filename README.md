@@ -18,29 +18,29 @@ $ conda install pytorch=0.4.1
 
 * Train WideResNet-34-10 model on CIFAR10:
 ```bash
-  -  python train_trades_cifar10.py
+  $ python train_trades_cifar10.py
 ```
 
 * Train CNN model (two convolutional layers + two fully-connected layers) on MNIST:
 ```bash
-  -  python train_trades_mnist.py
+  $ python train_trades_mnist.py
 ```
 
 * Train CNN model (two convolutional layers + two fully-connected layers) on MNIST (digits '1' and '3') for binary classification problem:
 ```bash
-  -  python train_trades_mnist_binary.py
+  $ python train_trades_mnist_binary.py
 ```
 
 ### Robustness Evaluation:
 
 * Evaluate robust WideResNet-34-10 model on CIFAR10 by FGSM-20 attack:
 ```bash
-  -  python pgd_attack_cifar10.py
+  $ python pgd_attack_cifar10.py
 ```
 
 * Evaluate robust CNN model on MNIST by FGSM-40 attack:
 ```bash
-  -  python pgd_attack_mnist.py
+  $ python pgd_attack_mnist.py
 ```
 
 ## TRADES: A New Loss Function for Adversarial Training

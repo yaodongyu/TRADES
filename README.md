@@ -27,7 +27,7 @@ $ conda install pytorch=0.4.1
   -  python train_trades_mnist.py
 ```
 
-* Train CNN model on MNIST for binary classification:
+* Train CNN model (two convolutional layers + two fully-connected layers) on MNIST (digit `1' and `3') for binary classification:
 ```bash
   -  python train_trades_mnist_binary.py
 ```

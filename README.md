@@ -77,7 +77,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 ## Reference
 For technical details and full experimental results, see [the paper]().
 ```
-@article{Zhang2018stackelberg, 
+@article{Zhang2019theoretically, 
 	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 
 	title = {Theoretically Principled Trade-off between Robustness and Accuracy}, 
 	journal={},
@@ -86,4 +86,4 @@ For technical details and full experimental results, see [the paper]().
 ```
 
 ## Contact
-Please contact hongyanz@cs.cmu.edu if you have any question on the codes.
+Please contact yy8ms@virginia.edu and hongyanz@cs.cmu.edu if you have any question on the codes.

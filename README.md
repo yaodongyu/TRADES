@@ -61,6 +61,8 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 
 ### Results in the Unrestricted Adversarial Examples Challenge
 
+In response to the Unrestricted Adversarial Examples Challenge, we implement TRADES (with extra spatial-transformation-invariant considerations) on bird-or-bicycle dataset.
+
 All percentages above correspond to the model's accuracy at 80% coverage.
 
 | Defense               | Submitted by  | Clean data | Common corruptions | Spatial grid attack | SPSA attack | Boundary attack |  Submission Date |

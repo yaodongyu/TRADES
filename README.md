@@ -46,9 +46,9 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### How to import TRADES Loss for your adversarial training?
-* Evaluate robust WideResNet-34-10 model on CIFAR10 by FGSM-20 attack:
+* To get started, cd into the directory. Put file 'trades.py' in the directory. Then write the following head in your running xxx.py file:
 ```bash
-  -  python pgd_attack_cifar10.py
+  -  from trades import TRADES_loss
 ```
 
 ## Experimental Results

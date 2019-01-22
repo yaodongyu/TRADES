@@ -54,7 +54,7 @@ The first term encourages the natural error to be optimized by minimizing the "d
 <p align="center">
     <img src="images/grid.png" width="450"\>
 </p>
-Left figure: decision boundary of natural training. Right figure: decision boundary of TRADES.
+Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
 
 ### How to import the TRADES loss for your adversarial training?
 * To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():

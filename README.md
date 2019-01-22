@@ -52,7 +52,7 @@ TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy lo
 The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter λ plays a critical role on balancing the importance of natural and robust errors.
 
 <p align="center">
-    <img src="images/grid.png" width="200"\>
+    <img src="images/grid.png" width="400"\>
 </p>
 Left figure: decision boundary of natural training. Right figure: decision boundary of TRADES.
 

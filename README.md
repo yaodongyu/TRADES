@@ -43,4 +43,6 @@ $ conda install pytorch=0.4.1
   -  python pgd_attack_mnist.py
 ```
 
+## TRADES: A New Loss Function for Adversarial Training
+
  ## Experimental Results

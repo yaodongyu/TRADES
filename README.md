@@ -46,7 +46,7 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### What is TRADES?
-![](http://latex.codecogs.com/gif.latex?\\\min_f\mathbb{E}\Large\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\Large\\})
+TRADES=![](http://latex.codecogs.com/gif.latex?\\\min_f\mathbb{E}\Large\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\Large\\})
 
 ### How to import the TRADES loss for your adversarial training?
 * To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():
@@ -64,7 +64,7 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 
-In response to the Unrestricted Adversarial Examples Challenge, we implement TRADES (with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
+In response to the Unrestricted Adversarial Examples Challenge, we implement a variant of TRADES (with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
 
 All percentages below correspond to the model's accuracy at 80% coverage.
 

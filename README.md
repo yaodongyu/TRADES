@@ -46,7 +46,7 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### How to import TRADES Loss for your adversarial training?
-* To get started, cd into the directory. Put file 'trades.py' in the directory. Then write the following head in your running xxx.py file:
+* To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():
 ```bash
   -  from trades import TRADES_loss
 ```

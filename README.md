@@ -46,7 +46,7 @@ $ conda install pytorch=0.4.1
 ## TRADES: A New Loss Function for Adversarial Training
 
 ### What is TRADES?
-TRADES minimizes a regularized surrogate loss ![](http://latex.codecogs.com/gif.latex?\\\mathcal{L}(\cdot,\cdot)) (e.g., the cross-entropy loss) for adversarial training:
+TRADES minimizes a regularized surrogate loss ![](http://latex.codecogs.com/gif.latex?\\ \mathcal{L}(\cdot,\cdot)) (e.g., the cross-entropy loss) for adversarial training:
 ![](http://latex.codecogs.com/gif.latex?\\\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\right\\})
 
 ### How to import the TRADES loss for your adversarial training?

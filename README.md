@@ -13,7 +13,6 @@ $ source ~/.bashrc
 $ conda install pytorch=0.4.1
 ```
 
-
 ## Running Examples
 ### Adversarial Training:
 
@@ -44,4 +43,4 @@ $ conda install pytorch=0.4.1
   -  python pgd_attack_mnist.py
 ```
 
- 
+ ## Experimental Results

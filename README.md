@@ -158,6 +158,17 @@ wget http://people.virginia.edu/~yy8ms/TRADES/model_mnist_smallcnn.pt
 wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
 ```
 
+### How to download MNIST dataset and CIFAR10 dataset?
+```bash
+cd TRADES
+mkdir data_attack
+cd data_attack
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
+```
+
 
 ### Load our CNN model for MNIST
 ```python

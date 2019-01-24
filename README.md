@@ -148,6 +148,7 @@ device = torch.device("cuda")
 model = SmallCNN().to(device)
 model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 ```
+For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3```.
 
 
 ### Load our WideResNet (WRN-34-10) model for CIFAR10
@@ -158,6 +159,7 @@ device = torch.device("cuda")
 model = WideResNet().to(device)
 model.load_state_dict(torch.load('./checkpoints/model_cifar_wrn.pt'))
 ```
+For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ```epsilon=0.031```.
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

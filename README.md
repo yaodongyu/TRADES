@@ -27,7 +27,29 @@ def train(args, model, device, train_loader, optimizer, epoch):
         loss.backward()
         optimizer.step()
 ```
+To apply TRADES, just need to modify the above code as follows,
+```python
+from trades import perturb_kl, TRADES_loss
 
+def train(args, model, device, train_loader, optimizer, epoch):
+    model.train()
+    for batch_idx, (data, target) in enumerate(train_loader):
+        data, target = data.to(device), target.to(device)
+        x_adv = perturb_kl(model=model, 
+                           x_natural=data,
+                           step_size=args.step_size, 
+                           epsilon=args.epsilon,
+                           perturb_steps=args.num_steps)
+        optimizer.zero_grad()
+        loss = TRADES_loss(model=model, 
+                           x_natural=data,
+                           x_adv=x_adv, 
+                           y=target,
+                           batch_size=args.batch_size, 
+                           beta=args.beta)
+        loss.backward()
+        optimizer.step()
+```
 
 ## Running Demos
 

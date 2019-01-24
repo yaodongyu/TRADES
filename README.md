@@ -207,7 +207,7 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 #### How to attack our CNN model on MNIST?
 * Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.
 * Step 2: Run your own attack on ```mnist_X.npy``` and save your adversarial images as ```mnist_X_adv.npy```.
-* Step 3: put ```mnist_X_adv.npy``` under ```data_attack``` file.
+* Step 3: put ```mnist_X_adv.npy``` under ```./data_attack```.
 * Step 4: run the evaluation code,
 ```bash
   $ python evaluate_attack_mnist.py
@@ -237,6 +237,17 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 | MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
 | CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
 | FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
+
+#### How to attack our WRM-34-10 model on CIFAR10?
+* Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.
+* Step 2: Run your own attack on ```cifar10_X.npy``` and save your adversarial images as ```cifar10_X_adv.npy```.
+* Step 3: put ```cifar10_X_adv.npy``` under ```./data_attack```.
+* Step 4: run the evaluation code,
+```bash
+  $ python evaluate_attack_cifar10.py
+```
+Note that the adversarial images should in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.031```(L_infinity).
+
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

@@ -76,11 +76,11 @@ def train(args, model, device, train_loader, optimizer, epoch):
         optimizer.step()
 ```
 #### Arguments:
-* --step_size: step size for perturbation
-* --epsilon: limit on the perturbation size
-* --num_steps: number of perturbation iterations for projected gradient descent (PGD)
-* --batch_size: batch size for training
-* --beta: trade-off regularization parameter, beta = 1/lambda.
+* ```step_size```: step size for perturbation
+* ```epsilon```: limit on the perturbation size
+* ```num_steps```: number of perturbation iterations for projected gradient descent (PGD)
+* ```batch_size```: batch size for training
+* ```beta```: trade-off regularization parameter, beta = 1/lambda.
 
 The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. Larger ```beta``` leads to more robust and less accurate models.
 

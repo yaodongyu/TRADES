@@ -156,7 +156,7 @@ from models.wideresnet import WideResNet
 
 device = torch.device("cuda")
 model = WideResNet().to(device)
-model.load_state_dict(torch.load(./checkpoints/model_cifar_wrn.pt))
+model.load_state_dict(torch.load('./checkpoints/model_cifar_wrn.pt'))
 ```
 
 ## Reference

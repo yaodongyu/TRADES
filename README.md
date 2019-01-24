@@ -84,6 +84,14 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. Larger ```beta``` leads to more robust and less accurate models.
 
+### Basic MNIST adversarial training example by TRADES:
+```python
+python mnist_example_trades.py
+```
+
+
+
+
 ## Running demos
 
 ### Adversarial training:

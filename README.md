@@ -88,7 +88,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ```python
 python mnist_example_trades.py
 ```
-
+We adopt ```main.py``` form [link](http://example.com "Title") and apply our new loss ```trades_loss()``` during training.
 
 
 

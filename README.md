@@ -169,6 +169,23 @@ wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
 wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
 ```
 
+### How to download MNIST dataset and CIFAR10 dataset?
+```bash
+cd TRADES
+mkdir data_attack
+cd data_attack
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
+```
+
+### About the datasets
+
+```cifar10_X.npy``` 	-- a ```(10000, 32, 32, 3)``` numpy array
+```cifar10_Y.npy``` 	-- a ```(10000, )``` numpy array
+```mnist_X.npy``` 	-- a ```(10000, 28, 28)``` numpy array
+```mnist_Y.npy``` 	-- a ```(10000, )``` numpy array
 
 ### Load our CNN model for MNIST
 ```python

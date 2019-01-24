@@ -150,9 +150,9 @@ model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 ```
 For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3``` (L_infinity perturbation distance).
 
-| Attack               | Submitted by  | Robust Accuracy | Natural Accuracy |
+| Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
 | --------------------- | ------------- | ------------| ------------ |
-| FGSM-40   |     |    100.0%    |    99.2%    | 
+| FGSM-40   |  (initial entry)   |     99.48%    |     96.07%    |
 
 
 ### Load our WideResNet (WRN-34-10) model for CIFAR10
@@ -164,6 +164,11 @@ model = WideResNet().to(device)
 model.load_state_dict(torch.load('./checkpoints/model_cifar_wrn.pt'))
 ```
 For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ```epsilon=0.031``` (L_infinity perturbation distance).
+
+
+| Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
+| --------------------- | ------------- | ------------| ------------ |
+| FGSM-20   |  (initial entry)   |    84.92%    |     56.61%    |
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

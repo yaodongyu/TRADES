@@ -166,9 +166,15 @@ model.load_state_dict(torch.load('./checkpoints/model_cifar_wrn.pt'))
 For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ```epsilon=0.031``` (L_infinity perturbation distance).
 
 
-| Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
-| --------------------- | ------------- | ------------| ------------ |
-| FGSM-20   |  (initial entry)   |    84.92%    |     56.61%    |
+| Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
+|-----------------------|-----------------------|-----------------------|-----------------------|
+| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
+| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
+| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|
+| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	|
+| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
+| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
+| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

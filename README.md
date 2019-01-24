@@ -37,7 +37,7 @@ Left figure: decision boundary by natural training. Right figure: decision bound
 
 
 
-## How to apply our new loss, TRADES, to train robust models?
+## How to use TRADES to train robust models?
 
 ### Natural training:
 ```python

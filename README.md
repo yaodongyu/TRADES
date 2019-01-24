@@ -4,8 +4,6 @@ This is the code for the paper "Theoretically Principled Trade-off between Robus
 
 The methodology is the winner of the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track).
 
-The code is written in python and requires numpy, torch, torchvision and the tqdm library.
-
 ## Prerequisites
 * Python (3.6.4)
 * Pytorch (0.4.1)

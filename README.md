@@ -31,8 +31,9 @@ The first term encourages the natural error to be optimized by minimizing the "d
 <p align="center">
     <img src="images/grid.png" width="450"\>
 </p>
+<p align="center">
 Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
-
+</p>
 
 
 

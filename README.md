@@ -87,7 +87,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ```python
 python mnist_example_trades.py
 ```
-We adapt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/master/mnist) and our new loss ```trades_loss()``` during training.
+We adapt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/master/mnist) to our new loss ```trades_loss()``` during training.
 
 
 
@@ -129,7 +129,9 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 <p align="center">
     <img src="images/NeurIPS.png" width="450"\>
 </p>
-
+<p align="center">
+<b>Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track). The vertical axis represents the mean l2 perturbation distance that makes robust models fail to output correct labels.
+</p>
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 

@@ -53,8 +53,8 @@ def train(args, model, device, train_loader, optimizer, epoch):
         optimizer.step()
 ```
 ### Adversarial training by TRADES:
-To apply TRADES, cd into the directory, put 'trades.py' to the directory. Just need to modify the above code as follows:
-``` python
+To apply TRADES, cd into the directory, put 'trades.py' to the directory. Replace F.nll_loss() in the above code with trades_loss():
+```python
 from trades import trades_loss
 
 def train(args, model, device, train_loader, optimizer, epoch):

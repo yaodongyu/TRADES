@@ -205,13 +205,14 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 | FGSM-40   |  (initial entry)   |     99.48%    |     96.07%    |
 
 #### How to attack our CNN model on MNIST?
-* First, download ```mnist_X.npy``` and ```mnist_Y.npy```.
-* Second, run your own attack on ```mnist_X.npy``` and save your adversarial images as ```mnist_X_adv.npy```.
-* Third, put ```mnist_X_adv.npy``` under ```data_attack``` file.
-* Finally, run the evaluation code,
+* Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.
+* Step 2: Run your own attack on ```mnist_X.npy``` and save your adversarial images as ```mnist_X_adv.npy```.
+* Step 3: put ```mnist_X_adv.npy``` under ```data_attack``` file.
+* Step 4: run the evaluation code,
 ```bash
   $ python evaluate_attack_mnist.py
 ```
+Note that the adversarial images should in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.3```(L_infinity).
 
 
 

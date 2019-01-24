@@ -56,23 +56,22 @@ def train(args, model, device, train_loader, optimizer, epoch):
 ### Adversarial training by TRADES:
 To apply TRADES, cd into the directory, put 'trades.py' to the directory. Just need to modify the above code as follows:
 ```python
-from trades import perturb_kl, trades_loss
+from trades import trades_loss
 
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
-        x_adv = perturb_kl(model=model, 
-                           x_natural=data,
-                           step_size=args.step_size, 
-                           epsilon=args.epsilon,
-                           perturb_steps=args.num_steps)
         optimizer.zero_grad()
-        loss = trades_loss(model=model, 
+        # calculate robust loss
+        loss = trades_loss(model=model,
                            x_natural=data,
-                           x_adv=x_adv, 
                            y=target,
-                           batch_size=args.batch_size, 
+                           optimizer=optimizer,
+                           step_size=args.step_size,
+                           epsilon=args.epsilon,
+                           perturb_steps=args.num_steps,
+                           batch_size=args.batch_size,
                            beta=args.beta)
         loss.backward()
         optimizer.step()

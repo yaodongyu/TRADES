@@ -140,22 +140,23 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 
 TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models. We provide checkpoints of our robust models on MNIST dataset and CIFAR dataset. On both datasets, we normalize all the images to ```[0, 1]```.
 
-### Load our CNN model for MNIST.
+### Load our CNN model for MNIST
 ```python
 from models.small_cnn import SmallCNN
 
 device = torch.device("cuda")
 model = SmallCNN().to(device)
-model.load_state_dict(torch.load(args.model_path))
+model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 ```
 
-### Load our WideResNet (WRN-34-10) model for CIFAR10.
-```
+
+### Load our WideResNet (WRN-34-10) model for CIFAR10
+```python
 from models.wideresnet import WideResNet
 
 device = torch.device("cuda")
 model = WideResNet().to(device)
-model.load_state_dict(torch.load(args.model_path))
+model.load_state_dict(torch.load(./checkpoints/model_cifar_wrn.pt))
 ```
 
 ## Reference

@@ -51,7 +51,12 @@ def train(args, model, device, train_loader, optimizer, epoch):
         loss.backward()
         optimizer.step()
 ```
-
+#### Arguments:
+* --step_size: step size for perturbation
+* --epsilon: limit on the perturbation size
+* --num_steps: number of perturbation iterations for projected gradient descent (PGD)
+* --batch_size: batch size for training
+* --beta: trade-off regularization parameter, beta = 1/lambda.
 ## Running Demos
 
 ### Adversarial Training:

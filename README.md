@@ -14,6 +14,21 @@ $ conda install pytorch=0.4.1
 ```
 
 ## Running Demos
+
+### How to apply our new loss - TRADES to train robust models?
+'''
+def train(args, model, device, train_loader, optimizer, epoch):
+    model.train()
+    for batch_idx, (data, target) in enumerate(train_loader):
+        data, target = data.to(device), target.to(device)
+        optimizer.zero_grad()
+        output = model(data)
+        loss = F.nll_loss(output, target)
+        loss.backward()
+        optimizer.step()
+'''
+
+
 ### Adversarial Training:
 
 * Train WideResNet-34-10 model on CIFAR10:
@@ -32,8 +47,6 @@ $ conda install pytorch=0.4.1
 ```
 
 ### Robustness Evaluation:
-
-* How to apply our new loss - TRADES to train robust models?
 
 * Evaluate robust WideResNet-34-10 model on CIFAR10 by FGSM-20 attack:
 ```bash

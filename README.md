@@ -33,6 +33,8 @@ $ conda install pytorch=0.4.1
 
 ### Robustness Evaluation:
 
+* How to apply our new loss - TRADES to train robust models?
+
 * Evaluate robust WideResNet-34-10 model on CIFAR10 by FGSM-20 attack:
 ```bash
   $ python pgd_attack_cifar10.py

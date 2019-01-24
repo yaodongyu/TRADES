@@ -37,9 +37,9 @@ Left figure: decision boundary by natural training. Right figure: decision bound
 
 
 
-## How to apply our new loss - TRADES to train robust models?
+## How to apply our new loss, TRADES, to train robust models?
 
-### Natural Training:
+### Natural training:
 ```python
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
@@ -51,7 +51,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
         loss.backward()
         optimizer.step()
 ```
-### Adversarial Training by TRADES:
+### Adversarial training by TRADES:
 To apply TRADES, cd into the directory, put file 'trades.py' to the directory. Just need to modify the above code as follows,
 ```python
 from trades import perturb_kl, trades_loss
@@ -84,9 +84,9 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. Larger ```beta``` leads to more robust and less accurate models.
 
-## Running Demos
+## Running demos
 
-### Adversarial Training:
+### Adversarial training:
 
 * Train WideResNet-34-10 model on CIFAR10:
 ```bash
@@ -103,7 +103,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
   $ python train_trades_mnist_binary.py
 ```
 
-### Robustness Evaluation:
+### Robustness evaluation:
 
 * Evaluate robust WideResNet-34-10 model on CIFAR10 by FGSM-20 attack:
 ```bash
@@ -116,7 +116,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ```
 
 
-## Experimental Results
+## Experimental results
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
 <p align="center">
@@ -138,7 +138,25 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 
 ## Want to attack TRADES? No problem!
 
-TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models.
+TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models. We provide checkpoints of our robust models on MNIST dataset and CIFAR dataset. On both datasets, we normalize all the images to ```[0, 1]```.
+
+### Load our CNN model for MNIST.
+```python
+from models.small_cnn import SmallCNN
+
+device = torch.device("cuda")
+model = SmallCNN().to(device)
+model.load_state_dict(torch.load(args.model_path))
+```
+
+### Load our WideResNet (WRN-34-10) model for CIFAR10.
+```
+from models.wideresnet import WideResNet
+
+device = torch.device("cuda")
+model = WideResNet().to(device)
+model.load_state_dict(torch.load(args.model_path))
+```
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

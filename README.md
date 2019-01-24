@@ -147,7 +147,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models. We provide checkpoints of our robust models on MNIST dataset and CIFAR dataset. On both datasets, we normalize all the images to ```[0, 1]```.
 
 ### How to download our CNN model for MNIST and WRN-34-10 for CIFAR10?
-```
+```bash
 cd TRADES
 mkdir checkpoints
 cd checkpoints

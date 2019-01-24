@@ -34,7 +34,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
         optimizer.step()
 ```
 ### Adversarial Training by TRADES:
-To apply TRADES, just need to modify the above code as follows,
+To apply TRADES, cd into the directory, put file 'trades.py' to the directory. Just need to modify the above code as follows,
 ```python
 from trades import perturb_kl, trades_loss
 
@@ -110,11 +110,6 @@ The first term encourages the natural error to be optimized by minimizing the "d
 </p>
 Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
 
-### How to import the TRADES loss for your adversarial training?
-* To get started, cd into the directory. Put file 'trades.py' to the directory. Then write the following head in your running 'xxx.py' file and replace your loss with TRADES_loss():
-```bash
-  -  from trades import TRADES_loss
-```
 
 ## Experimental Results
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)

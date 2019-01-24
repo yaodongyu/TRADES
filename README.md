@@ -2,6 +2,8 @@
 
 This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
 
+The methodology is the winner of NeurIPS 2018 Adversarial Vision Challenge.
+
 The code is written in python and requires numpy, matplotlib, torch, torchvision and the tqdm library.
 
 ## Install

@@ -182,6 +182,8 @@ wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
 
 ### About the datasets
 
+All the images in both datasets are normalized to ```[0, 1]```.
+
 * ```cifar10_X.npy``` 	-- a ```(10000, 32, 32, 3)``` numpy array
 * ```cifar10_Y.npy``` 	-- a ```(10000, )``` numpy array
 * ```mnist_X.npy``` 	-- a ```(10000, 28, 28)``` numpy array
@@ -201,6 +203,16 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 | Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
 | --------------------- | ------------- | ------------| ------------ |
 | FGSM-40   |  (initial entry)   |     99.48%    |     96.07%    |
+
+#### How to attack our CNN model on MNIST?
+* First, download ```mnist_X.npy``` and ```mnist_Y.npy```.
+* Second, run your own attack on ```mnist_X.npy``` and save your adversarial images as ```mnist_X_adv.npy```.
+* Third, put ```mnist_X_adv.npy``` under ```data_attack``` file.
+* Finally, run the evaluation code,
+```bash
+  $ python evaluate_attack_mnist.py
+```
+
 
 
 ### Load our WideResNet (WRN-34-10) model for CIFAR10

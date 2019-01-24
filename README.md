@@ -19,6 +19,24 @@ $ conda install pytorch=0.4.1
 * CUDA
 * numpy
 
+
+## TRADES: A New Loss Function for Adversarial Training
+
+### What is TRADES?
+TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
+![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\right\\})
+
+The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter λ plays a critical role on balancing the importance of natural and robust errors.
+
+<p align="center">
+    <img src="images/grid.png" width="450"\>
+</p>
+Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
+
+
+
+
+
 ## How to apply our new loss - TRADES to train robust models?
 
 ### Natural Training:
@@ -96,19 +114,6 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ```bash
   $ python pgd_attack_mnist.py
 ```
-
-## TRADES: A New Loss Function for Adversarial Training
-
-### What is TRADES?
-TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
-![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))/\lambda\right\\})
-
-The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter λ plays a critical role on balancing the importance of natural and robust errors.
-
-<p align="center">
-    <img src="images/grid.png" width="450"\>
-</p>
-Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
 
 
 ## Experimental Results

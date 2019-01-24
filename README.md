@@ -120,7 +120,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
 TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
 <p align="center">
-    <img src="images/NeurIPS.png" width="400"\>
+    <img src="images/NeurIPS.png" width="450"\>
 </p>
 
 

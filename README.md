@@ -13,7 +13,7 @@ $ source ~/.bashrc
 $ conda install pytorch=0.4.1
 ```
 
-## Prerequisites:
+## Prerequisites
 * Python (3.6.4)
 * Pytorch (0.4.1)
 * CUDA

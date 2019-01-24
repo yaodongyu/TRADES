@@ -13,6 +13,12 @@ $ source ~/.bashrc
 $ conda install pytorch=0.4.1
 ```
 
+## Prerequisites:
+* Python (3.6.4)
+* Pytorch (0.4.1)
+* CUDA
+* numpy
+
 ## How to apply our new loss - TRADES to train robust models?
 
 ### Natural Training:

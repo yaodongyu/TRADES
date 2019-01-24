@@ -63,7 +63,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
-        # calculate robust loss
+        # calculate robust loss - TRADES loss
         loss = trades_loss(model=model,
                            x_natural=data,
                            y=target,

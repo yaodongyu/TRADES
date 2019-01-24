@@ -29,7 +29,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
 ```
 To apply TRADES, just need to modify the above code as follows,
 ```python
-from trades import perturb_kl, TRADES_loss
+from trades import perturb_kl, trades_loss
 
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
@@ -41,7 +41,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps)
         optimizer.zero_grad()
-        loss = TRADES_loss(model=model, 
+        loss = trades_loss(model=model, 
                            x_natural=data,
                            x_adv=x_adv, 
                            y=target,

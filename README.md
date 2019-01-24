@@ -31,13 +31,14 @@ The first term encourages the natural error to be optimized by minimizing the "d
 <p align="center">
     <img src="images/grid.png" width="450"\>
 </p>
-Left figure: decision boundary by natural training. Right figure: decision boundary by TRADES.
+<p align="center">
+<b>Left figure:</b> decision boundary by natural training. <b>Right figure:</b> decision boundary by TRADES.
+</p>
 
 
 
 
-
-## How to apply our new loss, TRADES, to train robust models?
+## How to use TRADES to train robust models?
 
 ### Natural training:
 ```python
@@ -86,7 +87,7 @@ The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. L
 ```python
 python mnist_example_trades.py
 ```
-We adopt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/master/mnist) and apply our new loss ```trades_loss()``` during training.
+We adapt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/master/mnist) to our new loss ```trades_loss()``` during training.
 
 
 
@@ -128,7 +129,9 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 <p align="center">
     <img src="images/NeurIPS.png" width="450"\>
 </p>
-
+<p align="center">
+Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track). The vertical axis represents the mean l2 perturbation distance that makes robust models fail to output correct labels.
+</p>
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 
@@ -146,6 +149,46 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 
 TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models. We provide checkpoints of our robust models on MNIST dataset and CIFAR dataset. On both datasets, we normalize all the images to ```[0, 1]```.
 
+### How to download our CNN checkpoint for MNIST and WRN-34-10 checkpoint for CIFAR10?
+```bash
+cd TRADES
+mkdir checkpoints
+cd checkpoints
+wget http://people.virginia.edu/~yy8ms/TRADES/model_mnist_smallcnn.pt
+wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
+```
+
+### How to download MNIST dataset and CIFAR10 dataset?
+```bash
+cd TRADES
+mkdir data_attack
+cd data_attack
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
+```
+
+### How to download MNIST dataset and CIFAR10 dataset?
+```bash
+cd TRADES
+mkdir data_attack
+cd data_attack
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
+wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
+```
+
+### About the datasets
+
+All the images in both datasets are normalized to ```[0, 1]```.
+
+* ```cifar10_X.npy``` 	-- a ```(10000, 32, 32, 3)``` numpy array
+* ```cifar10_Y.npy``` 	-- a ```(10000, )``` numpy array
+* ```mnist_X.npy``` 	-- a ```(10000, 28, 28)``` numpy array
+* ```mnist_Y.npy``` 	-- a ```(10000, )``` numpy array
+
 ### Load our CNN model for MNIST
 ```python
 from models.small_cnn import SmallCNN
@@ -160,6 +203,17 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 | Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
 | --------------------- | ------------- | ------------| ------------ |
 | FGSM-40   |  (initial entry)   |     99.48%    |     96.07%    |
+
+#### How to attack our CNN model on MNIST?
+* Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.
+* Step 2: Run your own attack on ```mnist_X.npy``` and save your adversarial images as ```mnist_X_adv.npy```.
+* Step 3: put ```mnist_X_adv.npy``` under ```./data_attack```.
+* Step 4: run the evaluation code,
+```bash
+  $ python evaluate_attack_mnist.py
+```
+Note that the adversarial images should in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.3```(L_infinity).
+
 
 
 ### Load our WideResNet (WRN-34-10) model for CIFAR10
@@ -183,6 +237,17 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 | MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
 | CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
 | FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
+
+#### How to attack our WRM-34-10 model on CIFAR10?
+* Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.
+* Step 2: Run your own attack on ```cifar10_X.npy``` and save your adversarial images as ```cifar10_X_adv.npy```.
+* Step 3: put ```cifar10_X_adv.npy``` under ```./data_attack```.
+* Step 4: run the evaluation code,
+```bash
+  $ python evaluate_attack_cifar10.py
+```
+Note that the adversarial images should in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.031```(L_infinity).
+
 
 ## Reference
 For technical details and full experimental results, see [the paper]().

@@ -13,10 +13,10 @@ $ source ~/.bashrc
 $ conda install pytorch=0.4.1
 ```
 
-## Running Demos
+## How to apply our new loss - TRADES to train robust models?
 
-### How to apply our new loss - TRADES to train robust models?
-'''
+### Natural Training Example in pytorch:
+```
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
@@ -26,8 +26,10 @@ def train(args, model, device, train_loader, optimizer, epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
-'''
+```
 
+
+## Running Demos
 
 ### Adversarial Training:
 

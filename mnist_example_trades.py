@@ -43,8 +43,8 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
                            batch_size=args.batch_size,
-                           beta=args.beta)
-
+                           beta=args.beta,
+                           distance='l_inf')
         loss.backward()
         optimizer.step()
         if batch_idx % args.log_interval == 0:
@@ -91,7 +91,7 @@ def main():
                         help='perturbation')
     parser.add_argument('--num-steps', default=10,
                         help='perturb number of steps')
-    parser.add_argument('--step-size', default=0.03,
+    parser.add_argument('--step-size', default=0.02,
                         help='perturb step size')
     parser.add_argument('--beta', default=1.0,
                         help='regularization, i.e., 1/lambda in TRADES')

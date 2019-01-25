@@ -70,7 +70,8 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
                            batch_size=args.batch_size,
-                           beta=args.beta)
+                           beta=args.beta,
+			   distance='l_inf')
         loss.backward()
         optimizer.step()
 ```
@@ -80,6 +81,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
 * ```num_steps```: number of perturbation iterations for projected gradient descent (PGD)
 * ```batch_size```: batch size for training
 * ```beta```: trade-off regularization parameter.
+* ```distance```: type of perturbation distance, ```'l_inf'``` or ```'l_2'```.
 
 The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. Larger ```beta``` leads to more robust and less accurate models.
 

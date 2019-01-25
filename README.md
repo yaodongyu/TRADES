@@ -1,6 +1,6 @@
 # TRADES (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization) 
 
-This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
+This is the code for [the paper](https://arxiv.org/pdf/1901.08573.pdf) "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
 
 The methodology is the winner of the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track).
 
@@ -125,12 +125,12 @@ We adapt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/mast
 
 ## Experimental results
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
-TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of mean L2 perturbation distance.
+TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of L2 perturbation distance.
 <p align="center">
     <img src="images/NeurIPS.png" width="450"\>
 </p>
 <p align="center">
-Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track). The vertical axis represents the mean l2 perturbation distance that makes robust models fail to output correct labels.
+Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track). The vertical axis represents the mean L2 perturbation distance that makes robust models fail to output correct labels.
 </p>
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
@@ -250,12 +250,12 @@ Note that the adversarial images should in ```[0, 1]``` and the largest perturba
 
 
 ## Reference
-For technical details and full experimental results, see [the paper]().
+For technical details and full experimental results, see [the paper](https://arxiv.org/pdf/1901.08573.pdf).
 ```
 @article{Zhang2019theoretically, 
 	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 
 	title = {Theoretically Principled Trade-off between Robustness and Accuracy}, 
-	journal={},
+	journal = {arXiv preprint arXiv:1901.08573},
 	year = {2019}
 }
 ```

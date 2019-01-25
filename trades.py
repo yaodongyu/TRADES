@@ -49,6 +49,7 @@ def trades_loss(model,
 
     # generate adversarial example
     x_adv = x_natural.detach() + 0.001 * torch.randn(x_natural.shape).cuda().detach()
+    # L_infinity distance
     if distance == 'l_inf':
         for _ in range(perturb_steps):
             x_adv.requires_grad_()
@@ -59,6 +60,7 @@ def trades_loss(model,
             x_adv = x_adv.detach() + step_size * torch.sign(grad.detach())
             x_adv = torch.min(torch.max(x_adv, x_natural - epsilon), x_natural + epsilon)
             x_adv = torch.clamp(x_adv, 0.0, 1.0)
+    # L_2 distance
     elif distance == 'l_2':
         for _ in range(perturb_steps):
             x_adv.requires_grad_()

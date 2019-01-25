@@ -1,6 +1,6 @@
 # TRADES (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization) 
 
-This is the code for the paper "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
+This is the code for [the paper](https://arxiv.org/pdf/1901.08573.pdf). "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
 
 The methodology is the winner of the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track).
 
@@ -250,7 +250,7 @@ Note that the adversarial images should in ```[0, 1]``` and the largest perturba
 
 
 ## Reference
-For technical details and full experimental results, see [the paper]().
+For technical details and full experimental results, see [the paper](https://arxiv.org/pdf/1901.08573.pdf).
 ```
 @article{Zhang2019theoretically, 
 	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 

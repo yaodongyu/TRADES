@@ -26,7 +26,7 @@ $ conda install pytorch=0.4.1
 TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
 ![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\beta\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))\right\\})
 
-**Important: the surrogate loss L(.,.) should be classification-calibrated, in contrast to the [Adversarial Logit Pairing](https://arxiv.org/pdf/1803.06373.pdf).**
+**Important: the surrogate loss L(.,.) should be classification-calibrated according to our theory, in contrast to the [Adversarial Logit Pairing](https://arxiv.org/pdf/1803.06373.pdf).**
 
 The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter β plays a critical role on balancing the importance of natural and robust errors.
 

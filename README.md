@@ -24,7 +24,7 @@ $ conda install pytorch=0.4.1
 
 ### What is TRADES?
 TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
-![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\beta\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))\right\\})
+![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\beta\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))\right\\}.)
 
 **Important: the surrogate loss L(.,.) should be classification-calibrated according to our theory, in contrast to the [Adversarial Logit Pairing](https://arxiv.org/pdf/1803.06373.pdf).**
 

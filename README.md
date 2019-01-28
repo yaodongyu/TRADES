@@ -235,7 +235,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
 |-----------------------|-----------------------|-----------------------|-----------------------|
-| FGSM-1000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
+| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
 | FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
 | DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
 | DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|

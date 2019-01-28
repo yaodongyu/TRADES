@@ -188,10 +188,10 @@ wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
 
 All the images in both datasets are normalized to ```[0, 1]```.
 
-* ```cifar10_X.npy``` 	-- a ```(10000, 32, 32, 3)``` numpy array
-* ```cifar10_Y.npy``` 	-- a ```(10000, )``` numpy array
-* ```mnist_X.npy``` 	-- a ```(10000, 28, 28)``` numpy array
-* ```mnist_Y.npy``` 	-- a ```(10000, )``` numpy array
+* ```cifar10_X.npy``` 	-- a ```(10,000, 32, 32, 3)``` numpy array
+* ```cifar10_Y.npy``` 	-- a ```(10,000, )``` numpy array
+* ```mnist_X.npy``` 	-- a ```(10,000, 28, 28)``` numpy array
+* ```mnist_Y.npy``` 	-- a ```(10,000, )``` numpy array
 
 ### Load our CNN model for MNIST
 ```python

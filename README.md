@@ -206,7 +206,7 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 #### White-box leaderboard
 | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy |
 |-----------------------|-----------------------|------------------|-----------------|
-| FGSM-10000   		|  (initial entry)  	|     99.48%       |     95.60%      |
+| FGSM-1000   		|  (initial entry)  	|     99.48%       |     95.60%      |
 | FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      |
 
 #### How to attack our CNN model on MNIST?
@@ -235,7 +235,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
 |-----------------------|-----------------------|-----------------------|-----------------------|
-| FGSM-10000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
+| FGSM-1000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
 | FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
 | DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
 | DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|

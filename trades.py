@@ -69,3 +69,4 @@ def trades_loss(model,
                                                     F.softmax(model(x_natural), dim=1))
     loss = loss_natural + beta * loss_robust
     return loss
+

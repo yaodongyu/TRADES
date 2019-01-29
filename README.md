@@ -2,7 +2,7 @@
 
 This is the code for [the paper](https://arxiv.org/pdf/1901.08573.pdf) "Theoretically Principled Trade-off between Robustness and Accuracy" by Hongyang Zhang (CMU), Yaodong Yu (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
 
-The methodology is the winner of the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track).
+The methodology is the winner of the [NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track)](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards).
 
 ## Prerequisites
 * Python (3.6.4)
@@ -24,7 +24,9 @@ $ conda install pytorch=0.4.1
 
 ### What is TRADES?
 TRADES minimizes a regularized surrogate loss L(.,.) (e.g., the cross-entropy loss) for adversarial training:
-![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\beta\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))\right\\})
+![](http://latex.codecogs.com/gif.latex?\min_f\mathbb{E}\left\\{\mathcal{L}(f(X),Y)+\beta\max_{X'\in\mathbb{B}(X,\epsilon)}\mathcal{L}(f(X),f(X'))\right\\}.)
+
+**Important: the surrogate loss L(.,.) should be classification-calibrated according to our theory, in contrast to the [Adversarial Logit Pairing](https://arxiv.org/pdf/1803.06373.pdf).**
 
 The first term encourages the natural error to be optimized by minimizing the "difference" between f(X) and Y , while the second regularization term encourages the output to be smooth, that is, it pushes the decision boundary of classifier away from the sample instances via minimizing the "difference" between the prediction of natural example f(X) and that of adversarial example f(X′). The tuning parameter β plays a critical role on balancing the importance of natural and robust errors.
 
@@ -70,7 +72,8 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
                            batch_size=args.batch_size,
-                           beta=args.beta)
+                           beta=args.beta,
+			   distance='l_inf')
         loss.backward()
         optimizer.step()
 ```
@@ -80,6 +83,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
 * ```num_steps```: number of perturbation iterations for projected gradient descent (PGD)
 * ```batch_size```: batch size for training
 * ```beta```: trade-off regularization parameter.
+* ```distance```: type of perturbation distance, ```'l_inf'``` or ```'l_2'```.
 
 The trade-off regularization parameter ```beta``` can be set in ```[1, 10]```. Larger ```beta``` leads to more robust and less accurate models.
 
@@ -184,10 +188,10 @@ wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
 
 All the images in both datasets are normalized to ```[0, 1]```.
 
-* ```cifar10_X.npy``` 	-- a ```(10000, 32, 32, 3)``` numpy array
-* ```cifar10_Y.npy``` 	-- a ```(10000, )``` numpy array
-* ```mnist_X.npy``` 	-- a ```(10000, 28, 28)``` numpy array
-* ```mnist_Y.npy``` 	-- a ```(10000, )``` numpy array
+* ```cifar10_X.npy``` 	-- a ```(10,000, 32, 32, 3)``` numpy array
+* ```cifar10_Y.npy``` 	-- a ```(10,000, )``` numpy array
+* ```mnist_X.npy``` 	-- a ```(10,000, 28, 28)``` numpy array
+* ```mnist_Y.npy``` 	-- a ```(10,000, )``` numpy array
 
 ### Load our CNN model for MNIST
 ```python
@@ -200,9 +204,10 @@ model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3``` (L_infinity perturbation distance).
 
 #### White-box leaderboard
-| Attack               | Submitted by  | Natural Accuracy | Robust Accuracy |
-| --------------------- | ------------- | ------------| ------------ |
-| FGSM-40   |  (initial entry)   |     99.48%    |     96.07%    |
+| Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy |
+|-----------------------|-----------------------|------------------|-----------------|
+| FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      |
+| FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      |
 
 #### How to attack our CNN model on MNIST?
 * Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.
@@ -230,6 +235,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
 |-----------------------|-----------------------|-----------------------|-----------------------|
+| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
 | FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
 | DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
 | DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|

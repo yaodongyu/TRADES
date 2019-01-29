@@ -21,7 +21,7 @@ def trades_loss(model,
                 epsilon=0.031,
                 perturb_steps=10,
                 batch_size=128,
-                beta=2.0,
+                beta=1.0,
                 distance='l_inf'):
     # define KL-loss
     criterion_kl = nn.KLDivLoss(size_average=False)

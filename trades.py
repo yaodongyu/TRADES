@@ -62,7 +62,6 @@ def trades_loss(model,
     x_adv = Variable(torch.clamp(x_adv, 0.0, 1.0), requires_grad=False)
     # zero gradient
     optimizer.zero_grad()
-
     # calculate robust loss
     logits = model(x_natural)
     loss_natural = F.cross_entropy(logits, y)

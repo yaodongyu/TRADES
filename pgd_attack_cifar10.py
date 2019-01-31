@@ -110,14 +110,13 @@ def eval_adv_test_whitebox(model, device, test_loader):
     robust_err_total = 0
     natural_err_total = 0
 
-    with torch.no_grad():
-        for data, target in test_loader:
-            data, target = data.to(device), target.to(device)
-            # pgd attack
-            X, y = Variable(data, requires_grad=True), Variable(target)
-            err_natural, err_robust = _pgd_whitebox(model, X, y)
-            robust_err_total += err_robust
-            natural_err_total += err_natural
+    for data, target in test_loader:
+        data, target = data.to(device), target.to(device)
+        # pgd attack
+        X, y = Variable(data, requires_grad=True), Variable(target)
+        err_natural, err_robust = _pgd_whitebox(model, X, y)
+        robust_err_total += err_robust
+        natural_err_total += err_natural
     print('natural_err_total: ', natural_err_total)
     print('robust_err_total: ', robust_err_total)
 
@@ -131,14 +130,13 @@ def eval_adv_test_blackbox(model_target, model_source, device, test_loader):
     robust_err_total = 0
     natural_err_total = 0
 
-    with torch.no_grad():
-        for data, target in test_loader:
-            data, target = data.to(device), target.to(device)
-            # pgd attack
-            X, y = Variable(data, requires_grad=True), Variable(target)
-            err_natural, err_robust = _pgd_blackbox(model_target, model_source, X, y)
-            robust_err_total += err_robust
-            natural_err_total += err_natural
+    for data, target in test_loader:
+        data, target = data.to(device), target.to(device)
+        # pgd attack
+        X, y = Variable(data, requires_grad=True), Variable(target)
+        err_natural, err_robust = _pgd_blackbox(model_target, model_source, X, y)
+        robust_err_total += err_robust
+        natural_err_total += err_natural
     print('natural_err_total: ', natural_err_total)
     print('robust_err_total: ', robust_err_total)
 

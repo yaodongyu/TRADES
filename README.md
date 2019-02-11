@@ -129,7 +129,7 @@ We adapt ```main.py``` in [[link]](https://github.com/pytorch/examples/tree/mast
 
 ## Experimental results
 ### Results in the NeurIPS 2018 Adversarial Vision Challenge [[link]](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards)
-TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track), surpassing the runner-up approach by 11.41% in terms of L2 perturbation distance.
+TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track) on the Tiny ImageNet dataset, surpassing the runner-up approach by 11.41% in terms of L2 perturbation distance.
 <p align="center">
     <img src="images/NeurIPS.png" width="450"\>
 </p>

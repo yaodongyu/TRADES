@@ -4,7 +4,7 @@ This is the code for [the paper](https://arxiv.org/pdf/1901.08573.pdf) "Theoreti
 
 The methodology is the winner of the [NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track)](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards).
 
-The targeted attack method that is transferred from TRADES robust model is the winner of the [NeurIPS 2018 Adversarial Vision Challenge (Targeted Attack Track)](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-targeted-attack-track/leaderboards).
+The targeted attack that is transferred from TRADES robust model is the winner of the [NeurIPS 2018 Adversarial Vision Challenge (Targeted Attack Track)](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-targeted-attack-track/leaderboards).
 
 ## Prerequisites
 * Python (3.6.4)

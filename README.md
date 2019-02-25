@@ -269,4 +269,4 @@ For technical details and full experimental results, see [the paper](https://arx
 ```
 
 ## Contact
-Please contact yy8ms@virginia.edu and hongyanz@cs.cmu.edu if you have any question on the codes. Enjoy the codes!
+Please contact yy8ms@virginia.edu and hongyanz@cs.cmu.edu if you have any question on the codes. Enjoy!

@@ -258,7 +258,7 @@ Note that the adversarial images should in ```[0, 1]``` and the largest perturba
 
 
 ## Reference
-For technical details and full experimental results, see [the paper](https://arxiv.org/pdf/1901.08573.pdf).
+For technical details and full experimental results, please check [the paper](https://arxiv.org/pdf/1901.08573.pdf).
 ```
 @article{Zhang2019theoretically, 
 	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 

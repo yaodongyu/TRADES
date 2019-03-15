@@ -87,22 +87,25 @@ test_loader = torch.utils.data.DataLoader(dataset_test, batch_size=args.test_bat
 def perturb_hinge(net, x_nat):
     # Perturb function based on (E[\phi(f(x)f(x'))])
     # init with random noise
+    net.eval()
     x = x_nat.detach() + 0.001 * torch.randn(x_nat.shape).cuda().detach()
     for _ in range(args.num_steps):
         x.requires_grad_()
         with torch.enable_grad():
             # perturb based on hinge loss
-            loss = torch.mean(torch.clamp(1 - net(x).squeeze(1) * net(x_nat).squeeze(1)/args.beta, min=0))
+            loss = torch.mean(torch.clamp(1 - net(x).squeeze(1) * (net(x_nat).squeeze(1) / args.beta), min=0))
         grad = torch.autograd.grad(loss, [x])[0]
         x = x.detach() + args.step_size * torch.sign(grad.detach())
         x = torch.min(torch.max(x, x_nat - args.epsilon), x_nat + args.epsilon)
         x = torch.clamp(x, 0.0, 1.0)
+    net.train()
     return x
 
 
 def perturb_logistic(net, x_nat, target):
     # Perturb function based on logistic loss
     # init with random noise
+    net.eval()
     x = x_nat.detach() + 0.001 * torch.randn(x_nat.shape).cuda().detach()
     for _ in range(args.num_steps):
         x.requires_grad_()
@@ -113,6 +116,7 @@ def perturb_logistic(net, x_nat, target):
         x = x.detach() + args.step_size * torch.sign(grad.detach())
         x = torch.min(torch.max(x, x_nat - args.epsilon), x_nat + args.epsilon)
         x = torch.clamp(x, 0.0, 1.0)
+    net.train()
     return x
 
 
@@ -129,7 +133,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
         optimizer.zero_grad()
         output = model(data)
         loss_natural = torch.mean(torch.clamp(1 - output.squeeze(1) * target.float(), min=0))
-        loss_robust = torch.mean(torch.clamp(1 - model(x_adv).squeeze(1) * model(data).squeeze(1)/args.beta, min=0))
+        loss_robust = torch.mean(torch.clamp(1 - model(x_adv).squeeze(1) * (model(data).squeeze(1) / args.beta), min=0))
         loss = loss_natural + loss_robust
         loss.backward()
         optimizer.step()
@@ -196,7 +200,7 @@ def eval_adv_test(model, device, test_loader):
             x_perturb_linf = perturb_logistic(net=model, x_nat=data, target=target)
             output = model(x_perturb_linf)
             # adversarial loss (E[\phi(f(x)f(x'))])
-            adv_loss += torch.sum(torch.clamp(1 - model(x_perturb_linf).squeeze(1) * model(data).squeeze(1)/args.beta, min=0))
+            adv_loss += torch.sum(torch.clamp(1 - model(x_perturb_linf).squeeze(1) * (model(data).squeeze(1) / args.beta), min=0))
             pred = torch.sign(output).long()
             correct += pred.eq(target.view_as(pred)).sum().item()
 

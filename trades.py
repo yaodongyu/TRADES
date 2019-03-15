@@ -25,7 +25,7 @@ def trades_loss(model,
                 distance='l_inf'):
     # define KL-loss
     criterion_kl = nn.KLDivLoss(size_average=False)
-
+    model.eval()
     # generate adversarial example
     x_adv = x_natural.detach() + 0.001 * torch.randn(x_natural.shape).cuda().detach()
     if distance == 'l_inf':
@@ -58,6 +58,7 @@ def trades_loss(model,
             x_adv = torch.clamp(x_adv, 0.0, 1.0)
     else:
         x_adv = torch.clamp(x_adv, 0.0, 1.0)
+    model.train()
 
     x_adv = Variable(torch.clamp(x_adv, 0.0, 1.0), requires_grad=False)
     # zero gradient

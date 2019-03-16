@@ -73,7 +73,6 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            step_size=args.step_size,
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
-                           batch_size=args.batch_size,
                            beta=args.beta,
 			   distance='l_inf')
         loss.backward()
@@ -83,7 +82,6 @@ def train(args, model, device, train_loader, optimizer, epoch):
 * ```step_size```: step size for perturbation
 * ```epsilon```: limit on the perturbation size
 * ```num_steps```: number of perturbation iterations for projected gradient descent (PGD)
-* ```batch_size```: batch size for training
 * ```beta```: trade-off regularization parameter
 * ```distance```: type of perturbation distance, ```'l_inf'``` or ```'l_2'```
 

@@ -20,12 +20,12 @@ def trades_loss(model,
                 step_size=0.003,
                 epsilon=0.031,
                 perturb_steps=10,
-                batch_size=128,
                 beta=1.0,
                 distance='l_inf'):
     # define KL-loss
     criterion_kl = nn.KLDivLoss(size_average=False)
     model.eval()
+    batch_size = len(x_natural)
     # generate adversarial example
     x_adv = x_natural.detach() + 0.001 * torch.randn(x_natural.shape).cuda().detach()
     if distance == 'l_inf':

@@ -79,7 +79,6 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            step_size=args.step_size,
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
-                           batch_size=args.batch_size,
                            beta=args.beta)
 
         loss.backward()

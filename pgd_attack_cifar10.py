@@ -23,6 +23,9 @@ parser.add_argument('--num-steps', default=20,
                     help='perturb number of steps')
 parser.add_argument('--step-size', default=0.003,
                     help='perturb step size')
+parser.add_argument('--random',
+                    default=True,
+                    help='random initialization for PGD')
 parser.add_argument('--model-path',
                     default='./checkpoints/model_cifar_wrn.pt',
                     help='model for white-box attack evaluation')
@@ -57,6 +60,10 @@ def _pgd_whitebox(model,
     out = model(X)
     err = (out.data.max(1)[1] != y.data).float().sum()
     X_pgd = Variable(X.data, requires_grad=True)
+    if args.random:
+        random_noise = torch.FloatTensor(*X_pgd.shape).uniform_(-epsilon, epsilon).to(device)
+        X_pgd = Variable(X_pgd.data + random_noise, requires_grad=True)
+
     for _ in range(num_steps):
         opt = optim.SGD([X_pgd], lr=1e-3)
         opt.zero_grad()
@@ -84,10 +91,13 @@ def _pgd_blackbox(model_target,
     out = model_target(X)
     err = (out.data.max(1)[1] != y.data).float().sum()
     X_pgd = Variable(X.data, requires_grad=True)
+    if args.random:
+        random_noise = torch.FloatTensor(*X_pgd.shape).uniform_(-epsilon, epsilon).to(device)
+        X_pgd = Variable(X_pgd.data + random_noise, requires_grad=True)
+
     for _ in range(num_steps):
         opt = optim.SGD([X_pgd], lr=1e-3)
         opt.zero_grad()
-
         with torch.enable_grad():
             loss = nn.CrossEntropyLoss()(model_source(X_pgd), y)
         loss.backward()

@@ -51,12 +51,12 @@ def train(args, model, device, train_loader, optimizer, epoch):
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
-        loss = F.nll_loss(model(data), target)
+        loss = F.cross_entropy(model(data), target)
         loss.backward()
         optimizer.step()
 ```
 ### Adversarial training by TRADES:
-To apply TRADES, cd into the directory, put 'trades.py' to the directory. Replace ```F.nll_loss()``` above with ```trades_loss()```:
+To apply TRADES, cd into the directory, put 'trades.py' to the directory. Replace ```F.cross_entropy()``` above with ```trades_loss()```:
 ```python
 from trades import trades_loss
 

@@ -239,12 +239,12 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 | [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	|
 | FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
 | FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
+| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
+| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
 | DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
+| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
 | DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|
 | LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	|
-| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
-| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
-| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
 
 #### How to attack our WRM-34-10 model on CIFAR10?
 * Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.

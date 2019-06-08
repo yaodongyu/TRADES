@@ -206,7 +206,7 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 #### White-box leaderboard
 | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy |
 |-----------------------|-----------------------|------------------|-----------------|
-| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     93.33%    	|
+| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	|
 | FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      |
 | FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      |
 

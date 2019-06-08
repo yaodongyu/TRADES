@@ -235,6 +235,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
 |-----------------------|-----------------------|-----------------------|-----------------------|
+| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	|
 | FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
 | FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
 | DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|

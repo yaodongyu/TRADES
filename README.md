@@ -149,6 +149,23 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 | [Keras ResNet <br>(trained on ImageNet)](https://github.com/google/unrestricted-adversarial-examples/tree/master/examples/undefended_keras_resnet)   |  Google Brain   |    100.0%    |    99.2%    |  92.2%    |     1.6%    |     4.0%     |  Sept 29th, 2018 |
 | [Pytorch ResNet <br>(trained on bird-or-bicycle extras)](https://github.com/google/unrestricted-adversarial-examples/tree/master/examples/undefended_pytorch_resnet)  |  Google Brain | 98.8% | 74.6% | 49.5% | 2.5% | 8.0% | Oct 1st, 2018 |
 
+#### To test the performance of our model:
+- Step 1: Download our evaluation code:
+  ``` bash
+  git clone https://github.com/xincoder/google_attack.git
+  ```
+
+- Step 2: Download our pre-trained weight:
+  ``` bash
+  cd google_attack
+  wget http://carina.cse.lehigh.edu/xin_attack/res50_28_best.pt
+  ```
+  
+- Step 3: Run the code:
+  ``` bash
+  python eval_hongyangxin.py
+  ```
+
 ## Want to attack TRADES? No problem!
 
 TRADES is a new baseline method for adversarial defenses. We welcome various attack methods to attack our defense models. We provide checkpoints of our robust models on MNIST dataset and CIFAR dataset. On both datasets, we normalize all the images to ```[0, 1]```.

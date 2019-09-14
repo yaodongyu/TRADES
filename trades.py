@@ -39,23 +39,34 @@ def trades_loss(model,
             x_adv = torch.min(torch.max(x_adv, x_natural - epsilon), x_natural + epsilon)
             x_adv = torch.clamp(x_adv, 0.0, 1.0)
     elif distance == 'l_2':
-        for _ in range(perturb_steps):
-            x_adv.requires_grad_()
+        delta = 0.001 * torch.randn(x_natural.shape).cuda().detach()
+        delta = Variable(delta.data, requires_grad=True)
+
+        # Setup optimizers
+        optimizer_delta = optim.SGD([delta], lr=epsilon / perturb_steps * 2)
+
+        for i in range(perturb_steps):
+            adv = x_natural + delta
+
+            # optimize
+            optimizer_delta.zero_grad()
             with torch.enable_grad():
-                loss_kl = criterion_kl(F.log_softmax(model(x_adv), dim=1),
-                                       F.softmax(model(x_natural), dim=1))
-            grad = torch.autograd.grad(loss_kl, [x_adv])[0]
-            for idx_batch in range(batch_size):
-                grad_idx = grad[idx_batch]
-                grad_idx_norm = l2_norm(grad_idx)
-                grad_idx /= (grad_idx_norm + 1e-8)
-                x_adv[idx_batch] = x_adv[idx_batch].detach() + step_size * grad_idx
-                eta_x_adv = x_adv[idx_batch] - x_natural[idx_batch]
-                norm_eta = l2_norm(eta_x_adv)
-                if norm_eta > epsilon:
-                    eta_x_adv = eta_x_adv * epsilon / l2_norm(eta_x_adv)
-                x_adv[idx_batch] = x_natural[idx_batch] + eta_x_adv
-            x_adv = torch.clamp(x_adv, 0.0, 1.0)
+                loss = (-1) * criterion_kl(F.log_softmax(model(adv), dim=1),
+                                           F.softmax(model(x_natural), dim=1))
+            loss.backward()
+            # renorming gradient
+            grad_norms = delta.grad.view(batch_size, -1).norm(p=2, dim=1)
+            delta.grad.div_(grad_norms.view(-1, 1, 1, 1))
+            # avoid nan or inf if gradient is 0
+            if (grad_norms == 0).any():
+                delta.grad[grad_norms == 0] = torch.randn_like(delta.grad[grad_norms == 0])
+            optimizer_delta.step()
+
+            # projection
+            delta.data.add_(x_natural)
+            delta.data.clamp_(0, 1).sub_(x_natural)
+            delta.data.renorm_(p=2, dim=0, maxnorm=max_norm)
+        x_adv = Variable(x_natural + delta, requires_grad=False)
     else:
         x_adv = torch.clamp(x_adv, 0.0, 1.0)
     model.train()

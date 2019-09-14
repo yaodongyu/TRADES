@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+import torch.optim as optim
 
 
 def squared_l2_norm(x):

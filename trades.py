@@ -45,7 +45,7 @@ def trades_loss(model,
         # Setup optimizers
         optimizer_delta = optim.SGD([delta], lr=epsilon / perturb_steps * 2)
 
-        for i in range(perturb_steps):
+        for _ in range(perturb_steps):
             adv = x_natural + delta
 
             # optimize

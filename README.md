@@ -176,9 +176,12 @@ wget http://people.virginia.edu/~yy8ms/TRADES/model_mnist_smallcnn.pt
 wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
 ```
 Then download our pre-trained model
+
 https://drive.google.com/file/d/10sHvaXhTNZGz618QmD5gSOAjO3rMzV33/view?usp=sharing (CIFAR10)
+
 https://drive.google.com/file/d/1scTd9-YO3-5Ul3q5SJuRrTNX__LYLD_M/view?usp=sharing (MNIST)
-and put them into the folder "checkpoints"
+
+and put them into the folder "checkpoints".
 
 ### How to download MNIST dataset and CIFAR10 dataset?
 ```bash

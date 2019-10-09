@@ -156,10 +156,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
   ```
 
 - Step 2: Download our pre-trained weight:
-  ``` bash
-  cd google_attack
-  wget http://carina.cse.lehigh.edu/xin_attack/res50_28_best.pt
-  ```
+  Download from https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing and put in the folder "google_attack"
   
 - Step 3: Run the code:
   ``` bash

@@ -188,11 +188,19 @@ and put them into the folder "checkpoints".
 cd TRADES
 mkdir data_attack
 cd data_attack
-wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
 ```
+
+Then download the MNIST and CIFAR10 datasets
+
+https://drive.google.com/file/d/1PXePa721gTvmQ46bZogqNGkW31Vu6u3J/view?usp=sharing (CIFAR10_X)
+
+https://drive.google.com/file/d/1znICoQ8Ds9MH-1yhNssDs3hgBpvx57PV/view?usp=sharing (CIFAR10_Y)
+
+https://drive.google.com/file/d/12aWmoNs3EMwYe_Z5pBidx_22xj-5IqDU/view?usp=sharing (MNIST_X)
+
+https://drive.google.com/file/d/1kCBlNfg2TRn8BlqCkNTJiPDgsxIliQgZ/view?usp=sharing (MNIST_Y)
+
+and put them into the folder "data_attack".
 
 ### How to download MNIST dataset and CIFAR10 dataset?
 ```bash

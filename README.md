@@ -156,7 +156,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
   ```
 
 - Step 2: Download our pre-trained weight:
-  https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing and put it into the folder "google_attack"
+  [[link]](https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing) and put it into the folder "google_attack"
   
 - Step 3: Run the code:
   ``` bash
@@ -177,9 +177,9 @@ wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
 ```
 Then download our pre-trained model
 
-https://drive.google.com/file/d/10sHvaXhTNZGz618QmD5gSOAjO3rMzV33/view?usp=sharing (CIFAR10)
+[[link]](https://drive.google.com/file/d/10sHvaXhTNZGz618QmD5gSOAjO3rMzV33/view?usp=sharing) (CIFAR10)
 
-https://drive.google.com/file/d/1scTd9-YO3-5Ul3q5SJuRrTNX__LYLD_M/view?usp=sharing (MNIST)
+[[link]](https://drive.google.com/file/d/1scTd9-YO3-5Ul3q5SJuRrTNX__LYLD_M/view?usp=sharing) (MNIST)
 
 and put them into the folder "checkpoints".
 
@@ -192,13 +192,13 @@ cd data_attack
 
 Then download the MNIST and CIFAR10 datasets
 
-https://drive.google.com/file/d/1PXePa721gTvmQ46bZogqNGkW31Vu6u3J/view?usp=sharing (CIFAR10_X)
+[[link]](https://drive.google.com/file/d/1PXePa721gTvmQ46bZogqNGkW31Vu6u3J/view?usp=sharing) (CIFAR10_X)
 
-https://drive.google.com/file/d/1znICoQ8Ds9MH-1yhNssDs3hgBpvx57PV/view?usp=sharing (CIFAR10_Y)
+[[link]](https://drive.google.com/file/d/1znICoQ8Ds9MH-1yhNssDs3hgBpvx57PV/view?usp=sharing) (CIFAR10_Y)
 
-https://drive.google.com/file/d/12aWmoNs3EMwYe_Z5pBidx_22xj-5IqDU/view?usp=sharing (MNIST_X)
+[[link]](https://drive.google.com/file/d/12aWmoNs3EMwYe_Z5pBidx_22xj-5IqDU/view?usp=sharing) (MNIST_X)
 
-https://drive.google.com/file/d/1kCBlNfg2TRn8BlqCkNTJiPDgsxIliQgZ/view?usp=sharing (MNIST_Y)
+[[link]](https://drive.google.com/file/d/1kCBlNfg2TRn8BlqCkNTJiPDgsxIliQgZ/view?usp=sharing) (MNIST_Y)
 
 and put them into the folder "data_attack".
 

@@ -177,9 +177,9 @@ wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
 ```
 Then download our pre-trained model
 
-[[link]](https://drive.google.com/file/d/10sHvaXhTNZGz618QmD5gSOAjO3rMzV33/view?usp=sharing) (CIFAR10)
+[[download link]](https://drive.google.com/file/d/10sHvaXhTNZGz618QmD5gSOAjO3rMzV33/view?usp=sharing) (CIFAR10)
 
-[[link]](https://drive.google.com/file/d/1scTd9-YO3-5Ul3q5SJuRrTNX__LYLD_M/view?usp=sharing) (MNIST)
+[[download link]](https://drive.google.com/file/d/1scTd9-YO3-5Ul3q5SJuRrTNX__LYLD_M/view?usp=sharing) (MNIST)
 
 and put them into the folder "checkpoints".
 
@@ -192,26 +192,17 @@ cd data_attack
 
 Then download the MNIST and CIFAR10 datasets
 
-[[link]](https://drive.google.com/file/d/1PXePa721gTvmQ46bZogqNGkW31Vu6u3J/view?usp=sharing) (CIFAR10_X)
+[[download link]](https://drive.google.com/file/d/1PXePa721gTvmQ46bZogqNGkW31Vu6u3J/view?usp=sharing) (CIFAR10_X)
 
-[[link]](https://drive.google.com/file/d/1znICoQ8Ds9MH-1yhNssDs3hgBpvx57PV/view?usp=sharing) (CIFAR10_Y)
+[[download link]](https://drive.google.com/file/d/1znICoQ8Ds9MH-1yhNssDs3hgBpvx57PV/view?usp=sharing) (CIFAR10_Y)
 
-[[link]](https://drive.google.com/file/d/12aWmoNs3EMwYe_Z5pBidx_22xj-5IqDU/view?usp=sharing) (MNIST_X)
+[[download link]](https://drive.google.com/file/d/12aWmoNs3EMwYe_Z5pBidx_22xj-5IqDU/view?usp=sharing) (MNIST_X)
 
-[[link]](https://drive.google.com/file/d/1kCBlNfg2TRn8BlqCkNTJiPDgsxIliQgZ/view?usp=sharing) (MNIST_Y)
+[[download link]](https://drive.google.com/file/d/1kCBlNfg2TRn8BlqCkNTJiPDgsxIliQgZ/view?usp=sharing) (MNIST_Y)
 
 and put them into the folder "data_attack".
 
-### How to download MNIST dataset and CIFAR10 dataset?
-```bash
-cd TRADES
-mkdir data_attack
-cd data_attack
-wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_X.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/cifar10_Y.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/mnist_X.npy
-wget http://people.virginia.edu/~yy8ms/TRADES/mnist_Y.npy
-```
+
 
 ### About the datasets
 

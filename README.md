@@ -1,6 +1,6 @@
 # TRADES (**TR**adeoff-inspired **A**dversarial **DE**fense via **S**urrogate-loss minimization) 
 
-This is the code for the [ICML'19 paper](https://arxiv.org/pdf/1901.08573.pdf) "Theoretically Principled Trade-off between Robustness and Accuracy" by [Hongyang Zhang](https://github.com/hongyanz) (CMU), [Yaodong Yu](https://github.com/yaodongyu) (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
+This is the code for the [ICML'19 paper](https://arxiv.org/pdf/1901.08573.pdf) "Theoretically Principled Trade-off between Robustness and Accuracy" by [Hongyang Zhang](http://www.cs.cmu.edu/~hongyanz/) (CMU, TTIC), [Yaodong Yu](https://github.com/yaodongyu) (University of Virginia), Jiantao Jiao (UC Berkeley), Eric P. Xing (CMU & Petuum Inc.), Laurent El Ghaoui (UC Berkeley), and Michael I. Jordan (UC Berkeley).
 
 The methodology is the first-place winner of the [NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track)](https://www.crowdai.org/challenges/nips-2018-adversarial-vision-challenge-robust-model-track/leaderboards).
 
@@ -156,7 +156,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
   ```
 
 - Step 2: Download our pre-trained weight:
-  [download link](https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing) and put it into the folder "google_attack"
+  [[download link]](https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing) and put it into the folder "google_attack"
   
 - Step 3: Run the code:
   ``` bash

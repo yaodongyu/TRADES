@@ -172,8 +172,6 @@ TRADES is a new baseline method for adversarial defenses. We welcome various att
 cd TRADES
 mkdir checkpoints
 cd checkpoints
-wget http://people.virginia.edu/~yy8ms/TRADES/model_mnist_smallcnn.pt
-wget http://people.virginia.edu/~yy8ms/TRADES/model_cifar_wrn.pt
 ```
 Then download our pre-trained model
 

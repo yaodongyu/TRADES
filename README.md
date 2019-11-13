@@ -288,4 +288,4 @@ For technical details and full experimental results, please check [the paper](ht
 ```
 
 ## Contact
-Please contact yy8ms@virginia.edu and hongyanz@cs.cmu.edu if you have any question on the codes. Enjoy!
+Please contact yy8ms@virginia.edu and hongyanz@ttic.edu if you have any question on the codes. Enjoy!

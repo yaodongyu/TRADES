@@ -222,9 +222,9 @@ model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3``` (L_infinity perturbation distance).
 
 #### White-box leaderboard
-| Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy |
-|-----------------------|-----------------------|------------------|-----------------|
-| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	|
+| Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
+|-----------------------|-----------------------|------------------|-----------------|-----------------|
+| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	| Jun 7, 2019
 | FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      |
 | FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      |
 
@@ -252,18 +252,18 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 #### White-box leaderboard
 
-| Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	|
-|-----------------------|-----------------------|-----------------------|-----------------------|
-| [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	|
-| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	|
-| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	|
-| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	|
-| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	|
-| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	|
-| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	|
-| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	|
-| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	|
-| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	|
+| Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019
+| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	| Jun 7, 2019
+| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	| 
+| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	| 
+| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	| 
+| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	| 
+| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	| 
+| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	| 
+| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	| 
+| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	| 
 
 #### How to attack our WRM-34-10 model on CIFAR10?
 * Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.

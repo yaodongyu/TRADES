@@ -139,7 +139,7 @@ Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision 
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 
-In response to the Unrestricted Adversarial Examples Challenge, we implement TRADESv2 (a variant of TRADES with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset **without adversarial pretraining on ImageNet dataset**.
+In response to the Unrestricted Adversarial Examples Challenge, we implement TRADESv2 (a variant of TRADES with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset **without adversarial pretraining on the ImageNet dataset**.
 
 All percentages below correspond to the model's accuracy at 80% coverage.
 

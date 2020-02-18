@@ -162,6 +162,21 @@ All percentages below correspond to the model's accuracy at 80% coverage.
   ``` bash
   python eval_hongyangxin.py
   ```
+  
+### TRADES + Ransom Smoothing
+TRADES + Random Smoothing achieves SOTA certified robustness in ![](http://latex.codecogs.com/gif.latex?\ell_\infty) norm at radius 2/255.
+* Benchmark on certified ![](http://latex.codecogs.com/gif.latex?\ell_\infty) robustness at radius 2/255:
+
+| Method              	| Robust Accuracy  	| Natural Accuracy |
+|-----------------------|-----------------------|------------------|
+| TRADES + Random Smoothing   		|  62.6%   	|   78.7%    		|
+| [Salman et al. (2019)](https://arxiv.org/pdf/1906.04584.pdf)   		|  60.8%   	|   82.1%    		|
+| [Zhang et al. (2020)](https://arxiv.org/pdf/1906.06316.pdf)   		|  54.0%   	|   72.0%    		|
+| [Wong et al. (2018)](https://arxiv.org/pdf/1805.12514.pdf)   		|  53.9%   	|   68.3%    		|
+| [Mirman et al. (2018)](http://proceedings.mlr.press/v80/mirman18b/mirman18b.pdf)   		|  52.2%   	|   62.0%    		|
+| [Gowal et al. (2018)](https://arxiv.org/pdf/1810.12715.pdf)   		|  50.0%   	|   70.2%    		|
+| [Xiao et al. (2019)](https://arxiv.org/pdf/1809.03008.pdf)   		|  45.9%   	|   61.1%    		|
+  
 
 ## Want to attack TRADES? No problem!
 

@@ -139,7 +139,7 @@ Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision 
 
 ### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
 
-In response to the Unrestricted Adversarial Examples Challenge, we implement TRADESv2 (a variant of TRADES with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset.
+In response to the Unrestricted Adversarial Examples Challenge, we implement TRADESv2 (a variant of TRADES with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset **without adversarial pretraining on ImageNet dataset**.
 
 All percentages below correspond to the model's accuracy at 80% coverage.
 
@@ -225,8 +225,8 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
 |-----------------------|-----------------------|------------------|-----------------|-----------------|
 | [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	| Jun 7, 2019
-| FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      |
-| FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      |
+| FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      | -
+| FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      | -
 
 #### How to attack our CNN model on MNIST?
 * Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.
@@ -257,14 +257,14 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 | ODI-PGD  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020
 | [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019
 | [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	| Jun 7, 2019
-| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	| 
-| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	| 
-| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	| 
-| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	| 
-| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	| 
-| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	| 
-| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	| 
-| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	| 
+| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	| -
+| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	| -
+| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	| -
+| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	| -
+| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	| -
+| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	| -
+| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	| -
+| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	| -
 
 #### How to attack our WRM-34-10 model on CIFAR10?
 * Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.

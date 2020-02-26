@@ -163,7 +163,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
   python eval_hongyangxin.py
   ```
   
-### TRADES + Ransom Smoothing [[code]](https://github.com/hongyanz/TRADES-smoothing)
+### TRADES + Random Smoothing [[code]](https://github.com/hongyanz/TRADES-smoothing)
 TRADES + Random Smoothing achieves SOTA **certified** robustness in ![](http://latex.codecogs.com/gif.latex?\ell_\infty) norm at radius 2/255.
 * Results on certified ![](http://latex.codecogs.com/gif.latex?\ell_\infty) robustness at radius 2/255:
 

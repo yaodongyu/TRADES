@@ -150,7 +150,7 @@ All percentages below correspond to the model's accuracy at 80% coverage.
 | [Pytorch ResNet <br>(trained on bird-or-bicycle extras)](https://github.com/google/unrestricted-adversarial-examples/tree/master/examples/undefended_pytorch_resnet)  |  Google Brain | 98.8% | 74.6% | 49.5% | 2.5% | 8.0% | Oct 1st, 2018 |
 
 #### To download our checkpoint with the best performance:
-- Step 1: Clone and install relavent depedency following the [instructions](https://github.com/google/unrestricted-adversarial-examples/tree/master/bird-or-bicycle)
+- Step 1: Clone and install the dependencies following the [instructions](https://github.com/google/unrestricted-adversarial-examples/tree/master/bird-or-bicycle)
 
 - Step 2: Download our evaluation code:
   ``` bash

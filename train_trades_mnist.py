@@ -61,7 +61,7 @@ train_loader = torch.utils.data.DataLoader(
 test_loader = torch.utils.data.DataLoader(
     datasets.MNIST('../data', train=False,
                    transform=transforms.ToTensor()),
-                   batch_size=args.test_batch_size, shuffle=True, **kwargs)
+                   batch_size=args.test_batch_size, shuffle=False, **kwargs)
 
 
 def train(args, model, device, train_loader, optimizer, epoch):

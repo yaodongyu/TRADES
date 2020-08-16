@@ -137,33 +137,6 @@ TRADES won the 1st place out of 1,995 submissions in the NeurIPS 2018 Adversaria
 Top-6 results (out of 1,995 submissions) in the NeurIPS 2018 Adversarial Vision Challenge (Robust Model Track). The vertical axis represents the mean L2 perturbation distance that makes robust models fail to output correct labels.
 </p>
 
-### Results in the Unrestricted Adversarial Examples Challenge [[link]](https://github.com/google/unrestricted-adversarial-examples)
-
-In response to the Unrestricted Adversarial Examples Challenge, we implement TRADESv2 (a variant of TRADES with extra spatial-transformation-invariant considerations) on the bird-or-bicycle dataset **without adversarial pretraining on the ImageNet dataset**.
-
-All percentages below correspond to the model's accuracy at 80% coverage.
-
-| Defense               | Submitted by  | Clean data | Common corruptions | Spatial grid attack | SPSA attack | Boundary attack |  Submission Date |
-| --------------------- | ------------- | ------------| ------------ |--------------- |-------- | ------- | --------------- |
-| [Pytorch ResNet50 <br>(trained on bird-or-bicycle extras)](https://github.com/xincoder/google_attack) |TRADESv2|100.0%|100.0%|99.5%|100.0%|95.0%|Jan 17th, 2019 (EST)|
-| [Keras ResNet <br>(trained on ImageNet)](https://github.com/google/unrestricted-adversarial-examples/tree/master/examples/undefended_keras_resnet)   |  Google Brain   |    100.0%    |    99.2%    |  92.2%    |     1.6%    |     4.0%     |  Sept 29th, 2018 |
-| [Pytorch ResNet <br>(trained on bird-or-bicycle extras)](https://github.com/google/unrestricted-adversarial-examples/tree/master/examples/undefended_pytorch_resnet)  |  Google Brain | 98.8% | 74.6% | 49.5% | 2.5% | 8.0% | Oct 1st, 2018 |
-
-#### To download our checkpoint with the best performance:
-- Step 1: Clone and install the dependencies following the [instructions](https://github.com/google/unrestricted-adversarial-examples/tree/master/bird-or-bicycle)
-
-- Step 2: Download our evaluation code:
-  ``` bash
-  git clone https://github.com/xincoder/google_attack.git
-  ```
-
-- Step 3: Download our pre-trained weight:
-  [[download link]](https://drive.google.com/file/d/1l7uZW73gMzwvBDR5WWOXVPY1vWX3WEk4/view?usp=sharing) and put it into the folder "google_attack"
-  
-- Step 4: Run the code:
-  ``` bash
-  python eval_hongyangxin.py
-  ```
   
 ### TRADES + Random Smoothing [[code]](https://github.com/hongyanz/TRADES-smoothing)
 TRADES + Random Smoothing achieves SOTA **certified** robustness in ![](http://latex.codecogs.com/gif.latex?\ell_\infty) norm at radius 2/255.

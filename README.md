@@ -273,10 +273,10 @@ Note that the adversarial images should in ```[0, 1]``` and the largest perturba
 ## Reference
 For technical details and full experimental results, please check [the paper](https://arxiv.org/pdf/1901.08573.pdf).
 ```
-@article{zhang2019theoretically, 
+@inproceedings{zhang2019theoretically, 
 	author = {Hongyang Zhang and Yaodong Yu and Jiantao Jiao and Eric P. Xing and Laurent El Ghaoui and Michael I. Jordan}, 
 	title = {Theoretically Principled Trade-off between Robustness and Accuracy}, 
-	journal = {arXiv preprint arXiv:1901.08573},
+	booktitle = {International Conference on Machine Learning},
 	year = {2019}
 }
 ```

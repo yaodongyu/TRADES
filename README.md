@@ -246,6 +246,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
 |-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   84.92%    		|    52.95%    	| Sep 9, 2020
 | [ODI-PGD](https://arxiv.org/abs/2003.06878)  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020
 | [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019

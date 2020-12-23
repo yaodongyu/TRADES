@@ -269,7 +269,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 ```bash
   $ python evaluate_attack_cifar10.py
 ```
-Note that the adversarial images should in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.031```(L_infinity).
+Note that the adversarial images should be in ```[0, 1]``` and the largest perturbation distance is ```epsilon = 0.031```(L_infinity).
 
 
 ## Reference

@@ -214,6 +214,7 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 #### White-box leaderboard
 | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
 |-----------------------|-----------------------|------------------|-----------------|-----------------|
+| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry) 	|   99.48%  		|    92.47%   	| Dec 20, 2020
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   99.48%  		|    92.52%    	| Sep 9, 2020
 |[Square Attack](https://arxiv.org/abs/1912.00049)		| Andriushchenko Maksym	|   99.48%		|     92.58%	    | Mar 10, 2020
 | [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	| Jun 7, 2019
@@ -246,6 +247,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
 |-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry)   	|   84.92%    		|    52.92%    	| Dec 20, 2020
 | [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   84.92%    		|    52.95%    	| Sep 9, 2020
 | [ODI-PGD](https://arxiv.org/abs/2003.06878)  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020

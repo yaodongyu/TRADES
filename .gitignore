@@ -1,6 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-### Example user template template
-### Example user template
 
 # IntelliJ project files
 .idea
@@ -8,3 +6,5 @@
 out
 gen
 
+# Caches
+__pycache__

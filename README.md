@@ -214,6 +214,7 @@ For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size 
 #### White-box leaderboard
 | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
 |-----------------------|-----------------------|------------------|-----------------|-----------------|
+| ITA | Hong Lei | 99.48% | 92.46% | Aug 27, 2021 |
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry) 	|   99.48%  		|    92.47%   	| Dec 20, 2020
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   99.48%  		|    92.52%    	| Sep 9, 2020
 |[Square Attack](https://arxiv.org/abs/1912.00049)		| Andriushchenko Maksym	|   99.48%		|     92.58%	    | Mar 10, 2020

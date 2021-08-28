@@ -246,10 +246,10 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 #### White-box leaderboard
 
-| Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
-|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry)   	|   84.92%    		|    52.92%    	| Dec 20, 2020
-| [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020
+| Ranking      | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
+|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
+|1| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry)   	|   84.92%    		|    52.92%    	| Dec 20, 2020
+|2| [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020
 | [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   84.92%    		|    52.95%    	| Sep 9, 2020
 | [ODI-PGD](https://arxiv.org/abs/2003.06878)  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020
 | [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019

@@ -250,20 +250,20 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 |-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 |1| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry)   	|   84.92%    		|    52.92%    	| Dec 20, 2020
 |2| [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020
-| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   84.92%    		|    52.95%    	| Sep 9, 2020
-| [ODI-PGD](https://arxiv.org/abs/2003.06878)  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020
-| [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019
-| [AutoAttack](https://github.com/fra31/auto-attack)   	|  (initial entry)   	|   84.92%    		|     53.08%    	| -
-| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	| Jun 7, 2019
-| ITA | Hong Lei | 84.92% | 53.85% | Aug 27, 2021 |
-| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	| -
-| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	| -
-| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	| -
-| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	| -
-| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	| -
-| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	| -
-| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	| -
-| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	| -
+|3| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   84.92%    		|    52.95%    	| Sep 9, 2020
+|4| [ODI-PGD](https://arxiv.org/abs/2003.06878)  	|  Yusuke Tashiro  	|   84.92%    		|     53.01%    	| Feb 16, 2020
+|5| [MultiTargeted](https://arxiv.org/abs/1910.09338)   	|  Sven Gowal   	|   84.92%    		|     53.07%    	| Oct 31, 2019
+|6| [AutoAttack](https://github.com/fra31/auto-attack)   	|  (initial entry)   	|   84.92%    		|     53.08%    	| -
+|7| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   84.92%    		|     53.44%    	| Jun 7, 2019
+|8| ITA | Hong Lei | 84.92% | 53.85% | Aug 27, 2021 |
+|9| FGSM-1,000   		|  (initial entry)   	|   84.92%    		|     56.43%    	| -
+|10| FGSM-20   		|  (initial entry)   	|   84.92%    		|     56.61%    	| -
+|11| MI-FGSM	   	|  (initial entry)   	|   84.92%    		|     57.95%    	| -
+|12| FGSM 		   	|  (initial entry)   	|   84.92%    		|     61.06%    	| -
+|13| DeepFool (L_inf)   	|  (initial entry)   	|   84.92%    		|     61.38%    	| -
+|14| CW 		   	|  (initial entry)   	|   84.92%    		|     81.24%    	| -
+|15| DeepFool (L_2)   	|  (initial entry)   	|   84.92%    		|     81.55%    	| -
+|16| LBFGSAttack   	|  (initial entry)   	|   84.92%    		|     81.58%    	| -
 
 #### How to attack our WRM-34-10 model on CIFAR10?
 * Step 1: Download ```cifar10_X.npy``` and ```cifar10_Y.npy```.

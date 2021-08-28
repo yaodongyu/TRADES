@@ -212,15 +212,15 @@ model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3``` (L_infinity perturbation distance).
 
 #### White-box leaderboard
-| Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
-|-----------------------|-----------------------|------------------|-----------------|-----------------|
-| ITA | Hong Lei | 99.48% | 92.46% | Aug 27, 2021 |
-| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry) 	|   99.48%  		|    92.47%   	| Dec 20, 2020
-| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   99.48%  		|    92.52%    	| Sep 9, 2020
-|[Square Attack](https://arxiv.org/abs/1912.00049)		| Andriushchenko Maksym	|   99.48%		|     92.58%	    | Mar 10, 2020
-| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	| Jun 7, 2019
-| FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      | -
-| FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      | -
+|Ranking | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
+|-----------------------|-----------------------|-----------------------|------------------|-----------------|-----------------|
+|1| ITA | Hong Lei | 99.48% | 92.46% | Aug 27, 2021 |
+|2| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry) 	|   99.48%  		|    92.47%   	| Dec 20, 2020
+|3| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu  	|   99.48%  		|    92.52%    	| Sep 9, 2020
+|4|[Square Attack](https://arxiv.org/abs/1912.00049)		| Andriushchenko Maksym	|   99.48%		|     92.58%	    | Mar 10, 2020
+|5| [fab-attack](https://github.com/fra31/fab-attack)   		|  Francesco Croce   	|   99.48%    		|     93.33%    	| Jun 7, 2019
+|6| FGSM-1,000   		|  (initial entry)  	|     99.48%       |     95.60%      | -
+|7| FGSM-40   		|  (initial entry)   	|     99.48%       |     96.07%      | -
 
 #### How to attack our CNN model on MNIST?
 * Step 1: Download ```mnist_X.npy``` and ```mnist_Y.npy```.

@@ -212,7 +212,7 @@ model.load_state_dict(torch.load('./checkpoints/model_mnist_smallcnn.pt'))
 For our model ```model_mnist_smallcnn.pt```, the limit on the perturbation size is ```epsilon=0.3``` (L_infinity perturbation distance).
 
 #### White-box leaderboard
-|Ranking | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
+|Rank | Attack              	| Submitted by  	| Natural Accuracy | Robust Accuracy | Time |
 |-----------------------|-----------------------|-----------------------|------------------|-----------------|-----------------|
 |1| ITA | Hong Lei | 99.48% | 92.46% | Aug 27, 2021 |
 |2| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry) 	|   99.48%  		|    92.47%   	| Dec 20, 2020
@@ -246,7 +246,7 @@ For our model ```model_cifar_wrn.pt```, the limit on the perturbation size is ``
 
 #### White-box leaderboard
 
-| Ranking      | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
+| Rank      | Attack               	| Submitted by  	| Natural Accuracy 	| Robust Accuracy  	| Time	|
 |-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 |1| [EWR-PGD](https://github.com/liuye6666/EWR-PGD)  	|  Ye Liu (second entry)   	|   84.92%    		|    52.92%    	| Dec 20, 2020
 |2| [CAA](https://arxiv.org/abs/2012.05434)  	|  Xiaofeng Mao  	|   84.92%    		|    52.94%    	| Dec 14, 2020

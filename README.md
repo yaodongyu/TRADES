@@ -288,4 +288,4 @@ For technical details and full experimental results, please check [the paper](ht
 ```
 
 ## Contact
-Please contact yyu@eecs.berkeley.edu and hongyanz@ttic.edu if you have any question on the codes. Enjoy!
+Please contact yyu@eecs.berkeley.edu and hongyang.zhang@uwaterloo.ca if you have any question on the codes. Enjoy!

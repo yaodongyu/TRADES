@@ -9,7 +9,7 @@ import numpy as np
 parser = argparse.ArgumentParser(description='PyTorch MNIST Attack Evaluation')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
-parser.add_argument('--epsilon', default=0.3,
+parser.add_argument('--epsilon', type=float, default=0.3,
                     help='perturbation')
 parser.add_argument('--model-path',
                     default='./checkpoints/model_mnist_smallcnn.pt',

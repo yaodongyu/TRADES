@@ -25,13 +25,13 @@ parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
                     help='SGD momentum')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
-parser.add_argument('--epsilon', default=0.3,
+parser.add_argument('--epsilon', type=float, default=0.3,
                     help='perturbation')
-parser.add_argument('--num-steps', default=40,
+parser.add_argument('--num-steps', type=int, default=40,
                     help='perturb number of steps')
-parser.add_argument('--step-size', default=0.01,
+parser.add_argument('--step-size', type=float, default=0.01,
                     help='perturb step size')
-parser.add_argument('--beta', default=1.0,
+parser.add_argument('--beta', type=float, default=1.0,
                     help='regularization, i.e., 1/lambda in TRADES')
 parser.add_argument('--seed', type=int, default=1, metavar='S',
                     help='random seed (default: 1)')

@@ -17,13 +17,13 @@ parser.add_argument('--test-batch-size', type=int, default=200, metavar='N',
                     help='input batch size for testing (default: 200)')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
-parser.add_argument('--epsilon', default=0.3,
+parser.add_argument('--epsilon', type=float, default=0.3,
                     help='perturbation')
-parser.add_argument('--num-steps', default=40,
+parser.add_argument('--num-steps', type=int, default=40,
                     help='perturb number of steps')
-parser.add_argument('--step-size', default=0.01,
+parser.add_argument('--step-size', type=float, default=0.01,
                     help='perturb step size')
-parser.add_argument('--random',
+parser.add_argument('--random', action='store_true',
                     default=True,
                     help='random initialization for PGD')
 parser.add_argument('--model-path',
@@ -35,7 +35,7 @@ parser.add_argument('--source-model-path',
 parser.add_argument('--target-model-path',
                     default='./checkpoints/model_mnist_smallcnn.pt',
                     help='target model for black-box attack evaluation')
-parser.add_argument('--white-box-attack', default=True,
+parser.add_argument('--white-box-attack', action='store_true', default=True,
                     help='whether perform white-box attack')
 
 args = parser.parse_args()
